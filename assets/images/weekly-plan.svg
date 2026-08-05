@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" role="img" aria-label="Weekly training plan screen">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0C5E3F"/>
+      <stop offset="100%" stop-color="#134e35"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="640" rx="32" fill="#fafafa"/>
+  <rect width="360" height="640" rx="32" fill="none" stroke="rgba(12,94,63,0.12)" stroke-width="2"/>
+  <!-- Header -->
+  <rect x="0" y="0" width="360" height="100" rx="32" fill="url(#headerGrad)"/>
+  <rect x="0" y="68" width="360" height="32" fill="#134e35"/>
+  <text x="32" y="48" fill="#fff" font-family="system-ui,sans-serif" font-size="20" font-weight="700">Plan semanal</text>
+  <text x="32" y="72" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="12">Semana 12 · Objetivo HCP 15</text>
+  <!-- Day cards -->
+  <rect x="24" y="120" width="312" height="88" rx="16" fill="#fff" stroke="rgba(12,94,63,0.1)"/>
+  <rect x="40" y="136" width="48" height="48" rx="12" fill="#e8f8f0"/>
+  <text x="64" y="166" fill="#0C5E3F" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">L</text>
+  <text x="104" y="152" fill="#0d0f12" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Approach 130-160m</text>
+  <text x="104" y="172" fill="#4b5560" font-family="system-ui,sans-serif" font-size="11">45 min · Range · Hierro 7-8</text>
+  <text x="104" y="190" fill="#0C5E3F" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Prioridad alta</text>
+  <rect x="24" y="220" width="312" height="88" rx="16" fill="#fff" stroke="rgba(12,94,63,0.1)"/>
+  <rect x="40" y="236" width="48" height="48" rx="12" fill="#e8f8f0"/>
+  <text x="64" y="266" fill="#0C5E3F" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">M</text>
+  <text x="104" y="252" fill="#0d0f12" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Short game · Bunker</text>
+  <text x="104" y="272" fill="#4b5560" font-family="system-ui,sans-serif" font-size="11">30 min · Practice green</text>
+  <text x="104" y="290" fill="#8a939c" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Prioridad media</text>
+  <rect x="24" y="320" width="312" height="88" rx="16" fill="#fff" stroke="rgba(12,94,63,0.1)"/>
+  <rect x="40" y="336" width="48" height="48" rx="12" fill="#e8f8f0"/>
+  <text x="64" y="366" fill="#0C5E3F" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">X</text>
+  <text x="104" y="352" fill="#0d0f12" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Descanso activo</text>
+  <text x="104" y="372" fill="#4b5560" font-family="system-ui,sans-serif" font-size="11">Estiramientos · 15 min</text>
+  <rect x="24" y="420" width="312" height="88" rx="16" fill="#0C5E3F"/>
+  <rect x="40" y="436" width="48" height="48" rx="12" fill="rgba(255,255,255,0.15)"/>
+  <text x="64" y="466" fill="#3ECF8E" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">J</text>
+  <text x="104" y="452" fill="#fff" font-family="system-ui,sans-serif" font-size="14" font-weight="600">Ronda de práctica</text>
+  <text x="104" y="472" fill="rgba(255,255,255,0.8)" font-family="system-ui,sans-serif" font-size="11">9 hoyos · Enfócate en approach</text>
+  <text x="104" y="490" fill="#3ECF8E" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Hoy</text>
+  <!-- Progress -->
+  <rect x="24" y="528" width="312" height="80" rx="16" fill="#fff" stroke="rgba(12,94,63,0.1)"/>
+  <text x="40" y="556" fill="#0d0f12" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Progreso semanal</text>
+  <rect x="40" y="568" width="280" height="8" rx="4" fill="#e8f8f0"/>
+  <rect x="40" y="568" width="168" height="8" rx="4" fill="#3ECF8E"/>
+  <text x="320" y="596" fill="#0C5E3F" font-family="system-ui,sans-serif" font-size="11" font-weight="600" text-anchor="end">60%</text>
+</svg>

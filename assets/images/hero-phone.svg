@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" role="img" aria-label="BirdieLabs app mockup">
+  <defs>
+    <linearGradient id="screenBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1316"/>
+      <stop offset="100%" stop-color="#12181c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0C5E3F"/>
+      <stop offset="100%" stop-color="#3ECF8E"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-10%" width="140%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#0C5E3F" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Phone frame -->
+  <rect x="8" y="8" width="304" height="624" rx="38" fill="#1a1f24" filter="url(#shadow)"/>
+  <rect x="16" y="16" width="288" height="608" rx="32" fill="#0a0d10"/>
+  <rect x="108" y="28" width="104" height="28" rx="14" fill="#0a0d10"/>
+  <!-- Screen -->
+  <rect x="24" y="56" width="272" height="552" rx="24" fill="url(#screenBg)"/>
+  <!-- Status bar -->
+  <text x="40" y="84" fill="#b6bcc2" font-family="system-ui,sans-serif" font-size="11" font-weight="600">9:41</text>
+  <text x="256" y="84" fill="#b6bcc2" font-family="system-ui,sans-serif" font-size="11" text-anchor="end">100%</text>
+  <!-- Header -->
+  <circle cx="48" cy="118" r="16" fill="#0C5E3F"/>
+  <text x="48" y="123" fill="#3ECF8E" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">B</text>
+  <text x="72" y="114" fill="#f4f6f7" font-family="system-ui,sans-serif" font-size="13" font-weight="600">Coach IA</text>
+  <text x="72" y="130" fill="#7a848c" font-family="system-ui,sans-serif" font-size="10">Tu plan de hoy</text>
+  <!-- Chat bubble -->
+  <rect x="36" y="148" width="220" height="72" rx="16" fill="#12181c" stroke="rgba(255,255,255,0.08)"/>
+  <text x="48" y="172" fill="#f4f6f7" font-family="system-ui,sans-serif" font-size="11">Pierdes 2.1 golpes en</text>
+  <text x="48" y="188" fill="#f4f6f7" font-family="system-ui,sans-serif" font-size="11">approach desde 130-160m.</text>
+  <text x="48" y="208" fill="#3ECF8E" font-family="system-ui,sans-serif" font-size="10" font-weight="600">Entrena hierro 7 hoy ’</text>
+  <!-- Chart card -->
+  <rect x="36" y="236" width="248" height="140" rx="16" fill="#12181c" stroke="rgba(255,255,255,0.06)"/>
+  <text x="48" y="260" fill="#b6bcc2" font-family="system-ui,sans-serif" font-size="10" font-weight="600">STROKES GAINED</text>
+  <rect x="56" y="280" width="28" height="72" rx="6" fill="#3ECF8E" opacity="0.9"/>
+  <rect x="96" y="300" width="28" height="52" rx="6" fill="#0C5E3F"/>
+  <rect x="136" y="292" width="28" height="60" rx="6" fill="#3ECF8E" opacity="0.6"/>
+  <rect x="176" y="312" width="28" height="40" rx="6" fill="#0C5E3F" opacity="0.7"/>
+  <rect x="216" y="288" width="28" height="64" rx="6" fill="#3ECF8E" opacity="0.45"/>
+  <text x="70" y="368" fill="#7a848c" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">Tee</text>
+  <text x="110" y="368" fill="#7a848c" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">App</text>
+  <text x="150" y="368" fill="#7a848c" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">ARG</text>
+  <text x="190" y="368" fill="#7a848c" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">Putt</text>
+  <text x="230" y="368" fill="#7a848c" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">Total</text>
+  <!-- CTA button -->
+  <rect x="36" y="396" width="248" height="44" rx="22" fill="url(#accent)"/>
+  <text x="160" y="423" fill="#fff" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Ver plan semanal</text>
+  <!-- Stats row -->
+  <rect x="36" y="456" width="116" height="64" rx="14" fill="rgba(62,207,142,0.12)"/>
+  <text x="48" y="478" fill="#3ECF8E" font-family="system-ui,sans-serif" font-size="18" font-weight="700">-2.3</text>
+  <text x="48" y="496" fill="#7a848c" font-family="system-ui,sans-serif" font-size="9">Golpes / 6 sem</text>
+  <rect x="168" y="456" width="116" height="64" rx="14" fill="rgba(12,94,63,0.25)"/>
+  <text x="180" y="478" fill="#f4f6f7" font-family="system-ui,sans-serif" font-size="18" font-weight="700">HCP 15</text>
+  <text x="180" y="496" fill="#7a848c" font-family="system-ui,sans-serif" font-size="9">Objetivo: 12</text>
+  <!-- Home indicator -->
+  <rect x="120" y="612" width="80" height="4" rx="2" fill="rgba(255,255,255,0.25)"/>
+</svg>
