@@ -1044,20 +1044,20 @@
       <p data-i18n="cta.sub">Únete a la beta privada de BirdieLabs. Acceso anticipado gratuito para un grupo limitado de golfistas.</p>
       <form
   class="cta-form"
-  name="beta"
-  method="POST"
-  data-netlify="true"
-  netlify
+id="beta-form"
+method="POST"
+action="/api/beta"
 >
-<input type="hidden" name="form-name" value="beta">
+
         <input
+     id="email"
     type="email"
     name="email"
     data-i18n-placeholder="cta.placeholder"
     placeholder="tu@email.com"
     required
 >
-        <button type="submit" data-i18n="cta.button">Solicitar acceso</button>
+        <button id="submit-btn" type="submit" data-i18n="cta.button">Solicitar acceso</button>
       </form>
       <p class="cta-note" data-i18n="cta.note">Plazas limitadas. Sin compromiso. Solo los primeros 1.000 golfistas.</p>
     </div>
@@ -1156,19 +1156,40 @@
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
   }
 
-  // CTA form feedback (Netlify handles submit; this is optional UX fallback)
-  document.querySelector('.cta-form')?.addEventListener('submit', function (e) {
-    var btn = e.target.querySelector('button');
-    var dict = window.__blDict || {};
-    if (btn && dict['cta.buttonDone']) {
-      setTimeout(function () {
-        btn.textContent = dict['cta.buttonDone'];
-        setTimeout(function () {
-          btn.textContent = dict['cta.button'] || 'Solicitar acceso';
-        }, 4000);
-      }, 100);
+  document.getElementById("beta-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const button = document.getElementById("submit-btn");
+
+    button.disabled = true;
+    button.textContent = "Enviando...";
+
+    try {
+
+        const response = await fetch("/api/beta", {
+            method: "POST",
+            body: new FormData(form)
+        });
+
+        const data = await response.json();
+
+        alert(data.message);
+
+        if (data.success) {
+            form.reset();
+        }
+
+    } catch (err) {
+
+        alert("Ha ocurrido un error.");
+
     }
-  });
+
+    button.disabled = false;
+    button.textContent = "Solicitar acceso";
+
+});
 </script>
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
