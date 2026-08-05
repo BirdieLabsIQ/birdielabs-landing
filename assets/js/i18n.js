@@ -21,7 +21,7 @@
       'nav.beta': 'Únete a la beta',
       'nav.theme': 'Cambiar modo claro/oscuro',
       'hero.eyebrow': 'Beta privada 100 plazas limitadas',
-      'hero.titleLine1': 'PRUEBA BIRDIELABS 2026',
+      'hero.titleLine1': 'Deja de mirar estadísticas.',
       'hero.titleEm': 'Empieza a bajar tu hándicap.',
       'hero.sub': 'BirdieLabs analiza cada ronda con IA y te dice exactamente qu debes entrenar para jugar mejor golf.',
       'hero.cta1': 'Únete a la beta',
