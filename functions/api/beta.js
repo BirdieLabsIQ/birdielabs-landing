@@ -1,3 +1,4 @@
+import { Resend } from "resend";
 export async function onRequestPost(context) {
   try {
     const formData = await context.request.formData();
@@ -45,6 +46,18 @@ export async function onRequestPost(context) {
       )
       .bind(email)
       .run();
+      const resend = new Resend(context.env.RESEND_API_KEY);
+
+await resend.emails.send({
+  from: "BirdieLabs <beta@birdielabs.app>",
+  to: "birdielabsiq@gmail.com",
+  subject: "🚀 Nueva solicitud para la beta",
+  html: `
+    <h2>Nueva solicitud para la beta</h2>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Fecha:</strong> ${new Date().toLocaleString("es-ES")}</p>
+  `
+});
 
     return new Response(
       JSON.stringify({
