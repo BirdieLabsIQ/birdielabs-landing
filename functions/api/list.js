@@ -8,4 +8,4 @@ export async function onRequestGet(context) {
   `).all();
 
   return Response.json(results);
-}
+} 
