@@ -3,148 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fbfcfb">
-  <meta name="description" content="BirdieLabs IQ · Data · Performance">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="BirdieLabs IQ">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://birdielabs.app/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="BirdieLabs IQ">
-  <meta property="og:description" content="Data · Performance">
+  <meta property="og:description" content="BirdieLabs IQ">
   <meta property="og:url" content="https://birdielabs.app/">
-  <meta property="og:site_name" content="BirdieLabs IQ">
   <title>BirdieLabs IQ</title>
   <style>
-    :root { color-scheme: light; --ink:#101a1c; --green:#087744; --paper:#fbfcfb; }
-    *,*::before,*::after { box-sizing:border-box; }
-    html,body { width:100%; min-height:100%; margin:0; }
-    body {
-      min-height:100svh;
-      background:
-        radial-gradient(ellipse at 50% 41%, rgba(226,241,231,.52) 0%, rgba(246,249,246,.22) 30%, transparent 62%),
-        linear-gradient(115deg,#fff 0%,#fbfcfb 48%,#f8faf8 100%);
-      color:var(--ink);
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-    }
-    main {
-      min-height:100svh; width:100%; display:grid; place-items:center;
-      padding:max(36px,env(safe-area-inset-top)) 20px max(36px,env(safe-area-inset-bottom));
-      overflow:hidden; isolation:isolate; position:relative;
-    }
-    main::before {
-      content:""; position:absolute; z-index:-1; pointer-events:none;
-      width:min(80vw,920px); aspect-ratio:1; left:50%; top:47%;
-      transform:translate(-50%,-50%); border-radius:50%;
-      background:radial-gradient(circle,rgba(235,245,238,.34) 0%,rgba(248,251,248,.16) 43%,transparent 70%);
-    }
-    .identity {
-      width:100%; display:flex; flex-direction:column; align-items:center;
-      text-align:center; transform:translateY(-1.5vh);
-      animation:fade-in .8s ease-out both;
-    }
-    .emblem {
-      display:block; width:clamp(142px,19vw,252px); height:auto;
-      margin:0 0 clamp(24px,3.6vh,38px);
-      overflow:visible; filter:drop-shadow(0 8px 8px rgba(0,48,26,.15));
-    }
-    h1 {
-      margin:0; color:#11191b; font-size:clamp(3rem,6.5vw,5.8rem);
-      font-weight:650; line-height:1.02; letter-spacing:-.072em; white-space:nowrap;
-    }
-    h1 span { color:#087744; font-weight:620; letter-spacing:-.075em; }
-    .tagline {
-      margin:clamp(18px,2.5vh,27px) 0 0;
-      color:#747d7c; font-size:clamp(.72rem,1.25vw,.98rem);
-      font-weight:500; letter-spacing:.34em; line-height:1.6;
-      text-transform:uppercase; text-align:center; padding-left:.34em;
-    }
-    .teams { margin-top:clamp(64px,10.5vh,100px); width:min(100%, 460px); }
-    .teams-heading { display:flex; align-items:center; justify-content:center; gap:24px; color:#7d8787; font-size:clamp(.62rem,1vw,.78rem); letter-spacing:.24em; white-space:nowrap; }
-    .teams-heading::before,.teams-heading::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,transparent,#d8dfdc); }
-    .teams-heading::after { background:linear-gradient(90deg,#d8dfdc,transparent); }
-    .team-placeholders { display:flex; align-items:center; justify-content:center; gap:clamp(10px,1.35vw,20px); margin-top:28px; }
-    .team-placeholder { display:grid; place-items:center; width:clamp(48px,4.1vw,64px); aspect-ratio:1; border-radius:16px; background:linear-gradient(145deg,rgba(239,242,242,.9),rgba(246,248,248,.75)); }
-    .team-placeholder svg { width:55%; height:55%; stroke:#8b9699; stroke-width:2.2; fill:none; }
-    @keyframes fade-in { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:translateY(-1.5vh)} }
-    @media(max-width:600px) {
-      main { padding-inline:14px; }
-      .emblem { width:clamp(130px,38vw,190px); margin-bottom:25px; }
-      h1 { font-size:clamp(2.55rem,10.6vw,4rem); letter-spacing:-.075em; }
-      .tagline { margin-top:17px; font-size:.68rem; letter-spacing:.24em; padding-left:.24em; }
-      .teams { margin-top:clamp(52px,8vh,76px); }
-      .teams-heading { gap:14px; letter-spacing:.18em; }
-      .team-placeholders { gap:9px; margin-top:22px; }
-      .team-placeholder { width:clamp(42px,12vw,58px); border-radius:13px; }
-    }
-    @media(max-width:360px) {
-      h1 { font-size:2.32rem; }
-      .tagline { font-size:.61rem; letter-spacing:.19em; padding-left:.19em; }
-      .teams-heading { font-size:.57rem; gap:8px; letter-spacing:.12em; }
-      .team-placeholders { gap:7px; }
-      .team-placeholder { width:40px; border-radius:11px; }
-    }
-    @media(prefers-reduced-motion:reduce) { .identity{animation:none} }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; width: 100%; background: #fff; }
+    body { min-height: 100svh; display: grid; place-items: center; }
+    main { width: 100%; display: grid; place-items: center; }
+    img { display: block; width: 100%; max-width: 1672px; height: auto; }
   </style>
 </head>
 <body>
   <main aria-label="BirdieLabs IQ">
-    <div class="identity">
-      <svg class="emblem" viewBox="0 0 260 260" role="img" aria-label="Bola con flecha ascendente verde" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="sphere" cx="34%" cy="21%" r="83%">
-            <stop offset="0" stop-color="#fff"/>
-            <stop offset=".32" stop-color="#f7fbf8"/>
-            <stop offset=".68" stop-color="#d9e9de"/>
-            <stop offset=".87" stop-color="#0a6b40"/>
-            <stop offset="1" stop-color="#003d25"/>
-          </radialGradient>
-          <linearGradient id="edge" x1="44" y1="44" x2="216" y2="221" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#006438"/><stop offset=".38" stop-color="#14824e"/><stop offset=".7" stop-color="#004c2e"/><stop offset="1" stop-color="#002f1e"/>
-          </linearGradient>
-          <linearGradient id="arrowFill" x1="68" y1="171" x2="204" y2="54" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#004e30"/><stop offset=".45" stop-color="#087747"/><stop offset="1" stop-color="#00472a"/>
-          </linearGradient>
-          <linearGradient id="arrowEdge" x1="90" y1="186" x2="192" y2="66" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#d6e7dc"/><stop offset=".35" stop-color="#fff"/><stop offset="1" stop-color="#a4c9b2"/>
-          </linearGradient>
-          <pattern id="dimples" width="25" height="25" patternUnits="userSpaceOnUse">
-            <circle cx="8" cy="8" r="5.3" fill="#164f35" opacity=".23"/>
-            <circle cx="6.8" cy="6.6" r="3.9" fill="#fff" opacity=".78"/>
-            <circle cx="6.2" cy="5.7" r="2.15" fill="#fff" opacity=".95"/>
-          </pattern>
-          <clipPath id="ballClip"><circle cx="130" cy="130" r="87"/></clipPath>
-          <filter id="innerShade" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3"/>
-          </filter>
-        </defs>
-        <ellipse cx="130" cy="224" rx="77" ry="10" fill="#164f35" opacity=".13" filter="url(#innerShade)"/>
-        <circle cx="130" cy="130" r="91" fill="url(#edge)"/>
-        <circle cx="130" cy="127" r="86" fill="url(#sphere)" stroke="#063f29" stroke-width="1.7"/>
-        <g clip-path="url(#ballClip)">
-          <rect x="41" y="39" width="178" height="178" fill="url(#dimples)" opacity=".96"/>
-          <path d="M45 139 C65 74 104 40 154 42" fill="none" stroke="#fff" stroke-width="8" opacity=".38" stroke-linecap="round"/>
-          <path d="M53 165 C80 203 135 222 184 192" fill="none" stroke="#002f1e" stroke-width="13" opacity=".2"/>
-        </g>
-        <path d="M55 178 L111 122 L136 144 L199 70 L199 104 L213 58 L168 78 L184 81 L137 135 L111 113 L49 173 Z" fill="#002e1d" opacity=".48" transform="translate(2 5)"/>
-        <path d="M55 174 L111 118 L136 140 L199 66 L199 100 L213 54 L168 74 L184 77 L137 131 L111 109 L49 169 Z" fill="url(#arrowEdge)" stroke="#e5f0e8" stroke-width="2.5" stroke-linejoin="round"/>
-        <path d="M61 170 L112 119 L137 141 L194 74 L194 101 L207 62 L174 77 L185 80 L137 136 L112 114 L54 168 Z" fill="url(#arrowFill)" stroke="#075333" stroke-width="2.5" stroke-linejoin="round"/>
-        <path d="M63 168 L112 120 L137 142 L194 75" fill="none" stroke="#2a9561" stroke-width="2" opacity=".8" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <h1>BirdieLabs <span>IQ</span></h1>
-      <p class="tagline">DATA <span aria-hidden="true">·</span> PERFORMANCE <span aria-hidden="true">·</span> GOLF</p>
-      <section class="teams" aria-label="Nuestros equipos">
-        <div class="teams-heading">NUESTROS EQUIPOS</div>
-        <div class="team-placeholders" aria-hidden="true">
-          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
-          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
-          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
-          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
-          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
-        </div>
-      </section>
-    </div>
+    <img src="/assets/images/birdielabs-iq-landing.webp" alt="BirdieLabs IQ" width="1672" height="941" fetchpriority="high">
   </main>
 </body>
 </html>
