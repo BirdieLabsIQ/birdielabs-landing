@@ -60,16 +60,30 @@
       font-weight:500; letter-spacing:.34em; line-height:1.6;
       text-transform:uppercase; text-align:center; padding-left:.34em;
     }
+    .teams { margin-top:clamp(64px,10.5vh,100px); width:min(100%, 460px); }
+    .teams-heading { display:flex; align-items:center; justify-content:center; gap:24px; color:#7d8787; font-size:clamp(.62rem,1vw,.78rem); letter-spacing:.24em; white-space:nowrap; }
+    .teams-heading::before,.teams-heading::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,transparent,#d8dfdc); }
+    .teams-heading::after { background:linear-gradient(90deg,#d8dfdc,transparent); }
+    .team-placeholders { display:flex; align-items:center; justify-content:center; gap:clamp(10px,1.35vw,20px); margin-top:28px; }
+    .team-placeholder { display:grid; place-items:center; width:clamp(48px,4.1vw,64px); aspect-ratio:1; border-radius:16px; background:linear-gradient(145deg,rgba(239,242,242,.9),rgba(246,248,248,.75)); }
+    .team-placeholder svg { width:55%; height:55%; stroke:#8b9699; stroke-width:2.2; fill:none; }
     @keyframes fade-in { from{opacity:0;transform:translateY(4px)} to{opacity:1;transform:translateY(-1.5vh)} }
     @media(max-width:600px) {
       main { padding-inline:14px; }
       .emblem { width:clamp(130px,38vw,190px); margin-bottom:25px; }
       h1 { font-size:clamp(2.55rem,10.6vw,4rem); letter-spacing:-.075em; }
       .tagline { margin-top:17px; font-size:.68rem; letter-spacing:.24em; padding-left:.24em; }
+      .teams { margin-top:clamp(52px,8vh,76px); }
+      .teams-heading { gap:14px; letter-spacing:.18em; }
+      .team-placeholders { gap:9px; margin-top:22px; }
+      .team-placeholder { width:clamp(42px,12vw,58px); border-radius:13px; }
     }
     @media(max-width:360px) {
       h1 { font-size:2.32rem; }
       .tagline { font-size:.61rem; letter-spacing:.19em; padding-left:.19em; }
+      .teams-heading { font-size:.57rem; gap:8px; letter-spacing:.12em; }
+      .team-placeholders { gap:7px; }
+      .team-placeholder { width:40px; border-radius:11px; }
     }
     @media(prefers-reduced-motion:reduce) { .identity{animation:none} }
   </style>
@@ -119,7 +133,17 @@
         <path d="M63 168 L112 120 L137 142 L194 75" fill="none" stroke="#2a9561" stroke-width="2" opacity=".8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <h1>BirdieLabs <span>IQ</span></h1>
-      <p class="tagline">DATA <span aria-hidden="true">·</span> PERFORMANCE</p>
+      <p class="tagline">DATA <span aria-hidden="true">·</span> PERFORMANCE <span aria-hidden="true">·</span> GOLF</p>
+      <section class="teams" aria-label="Nuestros equipos">
+        <div class="teams-heading">NUESTROS EQUIPOS</div>
+        <div class="team-placeholders" aria-hidden="true">
+          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
+          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
+          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
+          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
+          <div class="team-placeholder"><svg viewBox="0 0 24 24"><path d="M12 2.8c2.6 2 5.2 2.7 8 3v5.4c0 5.2-3.3 8.5-8 10.9-4.7-2.4-8-5.7-8-10.9V5.8c2.8-.3 5.4-1 8-3Z"/></svg></div>
+        </div>
+      </section>
     </div>
   </main>
 </body>
