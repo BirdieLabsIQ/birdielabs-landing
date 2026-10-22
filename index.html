@@ -107,6 +107,27 @@
       line-height: 1.7;
       letter-spacing: -.012em;
     }
+    .contact {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 8px 12px;
+      color: var(--green);
+      font-size: .92rem;
+      font-weight: 500;
+      letter-spacing: -.01em;
+      text-decoration: none;
+      text-underline-offset: 4px;
+      border-radius: 8px;
+      transition: background-color .2s ease, text-decoration-color .2s ease;
+    }
+    .contact:hover, .contact:focus-visible {
+      background: rgba(7, 91, 58, .06);
+      text-decoration: underline;
+    }
+    .contact:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
     footer {
       position: absolute;
       left: 20px;
@@ -148,6 +169,7 @@
       <p class="tagline">tu club, tu app</p>
       <span class="rule" aria-hidden="true"></span>
       <p class="descriptor">La tecnología que conecta todo lo que hace grande a tu club.</p>
+      <a class="contact" href="mailto:birdielabsiq@gmail.com" aria-label="Contactar con BirdieLabs IQ por correo electrónico">birdielabsiq@gmail.com</a>
     </section>
     <footer>BirdieLabs IQ <span aria-hidden="true">·</span> Tecnología para clubes</footer>
   </main>
