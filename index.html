@@ -3,27 +3,153 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="BirdieLabs IQ">
+  <meta name="theme-color" content="#fbfcfb">
+  <meta name="description" content="BirdieLabs IQ. Tu club, tu app. Tecnología sencilla para conectar la vida de tu club.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://birdielabs.app/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="BirdieLabs IQ">
-  <meta property="og:description" content="BirdieLabs IQ">
+  <meta property="og:title" content="BirdieLabs IQ — tu club, tu app">
+  <meta property="og:description" content="Tecnología sencilla para conectar la vida de tu club.">
   <meta property="og:url" content="https://birdielabs.app/">
-  <title>BirdieLabs IQ</title>
+  <meta property="og:site_name" content="BirdieLabs IQ">
+  <title>BirdieLabs IQ — tu club, tu app</title>
   <style>
-    * { box-sizing: border-box; }
-    html, body { margin: 0; min-height: 100%; width: 100%; background: #fff; }
-    body { min-height: 100svh; display: grid; place-items: center; }
-    main { width: 100%; display: grid; place-items: center; }
-    img { display: block; width: 100%; max-width: 1672px; height: auto; }
+    :root {
+      color-scheme: light;
+      --ink: #101a17;
+      --green: #075b3a;
+      --muted: #727b76;
+      --paper: #fbfcfb;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--paper); }
+    body {
+      min-height: 100svh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 50% 42%, rgba(225, 239, 229, .48) 0%, rgba(246, 249, 246, .25) 34%, transparent 68%),
+        linear-gradient(135deg, #fff 0%, #fbfcfb 58%, #f7faf7 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    main {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: max(36px, env(safe-area-inset-top)) 22px max(36px, env(safe-area-inset-bottom));
+      overflow: hidden;
+      isolation: isolate;
+      position: relative;
+    }
+    main::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: min(76vw, 760px);
+      aspect-ratio: 1;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(226, 240, 230, .42), rgba(248, 251, 248, .12) 53%, transparent 72%);
+      pointer-events: none;
+    }
+    .identity {
+      width: min(100%, 780px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: arrive .9s cubic-bezier(.2,.7,.2,1) both;
+    }
+    .emblem {
+      display: block;
+      width: clamp(116px, 18vw, 196px);
+      height: auto;
+      object-fit: contain;
+      margin: 0 0 clamp(26px, 4.2vh, 42px);
+      filter: drop-shadow(0 9px 13px rgba(0, 48, 26, .12));
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.65rem, 7.1vw, 5.6rem);
+      font-weight: 650;
+      letter-spacing: -.075em;
+      line-height: 1.02;
+      color: #111a17;
+    }
+    .tagline {
+      margin: clamp(18px, 2.7vh, 28px) 0 0;
+      color: var(--green);
+      font-size: clamp(1.08rem, 2.1vw, 1.5rem);
+      font-weight: 520;
+      letter-spacing: -.025em;
+      line-height: 1.35;
+    }
+    .rule {
+      width: 34px;
+      height: 2px;
+      margin-top: clamp(34px, 5.5vh, 54px);
+      border-radius: 2px;
+      background: #0b6a42;
+      opacity: .72;
+    }
+    .descriptor {
+      max-width: 350px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(.9rem, 1.4vw, 1.02rem);
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: -.012em;
+    }
+    footer {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: max(18px, env(safe-area-inset-bottom));
+      text-align: center;
+      color: #9aa29d;
+      font-size: .68rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    @keyframes arrive {
+      from { opacity: 0; transform: translateY(9px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 480px) {
+      main { padding-inline: 20px; }
+      .emblem { width: clamp(112px, 34vw, 150px); margin-bottom: 27px; }
+      h1 { font-size: clamp(2.45rem, 10.2vw, 3.3rem); letter-spacing: -.078em; }
+      .tagline { margin-top: 17px; font-size: 1.08rem; }
+      .rule { margin-top: 38px; }
+      .descriptor { max-width: 290px; font-size: .9rem; }
+      footer { font-size: .59rem; letter-spacing: .1em; }
+    }
+    @media (max-width: 340px) {
+      h1 { font-size: 2.2rem; }
+      .tagline { font-size: 1rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
   </style>
 </head>
 <body>
-  <main aria-label="BirdieLabs IQ">
-    <img src="/assets/images/birdielabs-iq-landing.webp" alt="BirdieLabs IQ" width="1672" height="941" fetchpriority="high">
+  <main>
+    <section class="identity" aria-labelledby="brand-name">
+      <img class="emblem" src="/favicon.png" alt="Logotipo de BirdieLabs IQ" width="256" height="256" fetchpriority="high">
+      <h1 id="brand-name">BirdieLabs IQ</h1>
+      <p class="tagline">tu club, tu app</p>
+      <span class="rule" aria-hidden="true"></span>
+      <p class="descriptor">La tecnología que conecta todo lo que hace grande a tu club.</p>
+    </section>
+    <footer>BirdieLabs IQ <span aria-hidden="true">·</span> Tecnología para clubes</footer>
   </main>
 </body>
 </html>
