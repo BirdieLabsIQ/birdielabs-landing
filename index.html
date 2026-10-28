@@ -67,7 +67,8 @@
       overflow: hidden;
     }
     .tile::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(160deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 42%); pointer-events: none; }
-    .tile img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 19%; }
+    .tile { display: grid; place-items: center; }
+    .tile img { display: block; grid-area: 1 / 1; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 19%; align-self: center; justify-self: center; }
     .app:hover .tile, .app:focus-visible .tile { transform: translateY(-4px) scale(1.04); box-shadow: inset 0 1.5px 0 rgba(255,255,255,.95), 0 22px 34px -14px rgba(0,56,32,.4), 0 2px 6px rgba(0,56,32,.1); }
     .app:active .tile { transform: scale(.97); }
     .app:focus-visible .tile { outline: 2px solid var(--green); outline-offset: 3px; }
@@ -88,7 +89,8 @@
     dialog[open] { animation: pop .32s cubic-bezier(.2,.9,.25,1.1) both; }
     dialog::backdrop { background: rgba(14,32,24,.28); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: fade .25s ease both; }
     .dlg-icon { width: 68px; height: 68px; margin: 0 auto 14px; border-radius: 22%; padding: 5px; background: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 8px 18px -8px rgba(0,56,32,.35); }
-    .dlg-icon img { width: 100%; height: 100%; object-fit: contain; border-radius: 18%; display: block; }
+    .dlg-icon { display: grid; place-items: center; }
+    .dlg-icon img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 18%; display: block; }
     dialog h2 { margin: 0; font-size: 1.3rem; font-weight: 650; letter-spacing: -.035em; }
     dialog p { margin: 12px 0 0; color: #47524d; font-size: .95rem; line-height: 1.6; }
     dialog p strong { color: var(--ink); font-weight: 600; }
