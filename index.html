@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#fbfcfb">
-  <meta name="description" content="BirdieLabs IQ. Tu club, tu app. Tecnología sencilla para conectar la vida de tu club.">
+  <meta name="description" content="BirdieLabs IQ. Apps para clubes: convocatorias, resultados, noticias y mensajes en el móvil de tu club.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://birdielabs.app/">
   <link rel="icon" type="image/png" href="/favicon.png">
@@ -15,163 +15,95 @@
   <meta property="og:site_name" content="BirdieLabs IQ">
   <title>BirdieLabs IQ — tu club, tu app</title>
   <style>
-    :root {
-      color-scheme: light;
-      --ink: #101a17;
-      --green: #075b3a;
-      --muted: #727b76;
-      --paper: #fbfcfb;
-    }
+    :root { color-scheme: light; --ink:#101a17; --green:#075b3a; --muted:#727b76; --paper:#fbfcfb; --line:#e3ebe5; }
     *, *::before, *::after { box-sizing: border-box; }
-    html { min-height: 100%; background: var(--paper); }
+    html { background: var(--paper); }
     body {
-      min-height: 100svh;
-      margin: 0;
-      color: var(--ink);
-      background:
-        radial-gradient(ellipse at 50% 42%, rgba(225, 239, 229, .48) 0%, rgba(246, 249, 246, .25) 34%, transparent 68%),
-        linear-gradient(135deg, #fff 0%, #fbfcfb 58%, #f7faf7 100%);
+      min-height: 100svh; margin: 0; color: var(--ink);
+      background: radial-gradient(ellipse at 50% 0%, rgba(225,239,229,.55) 0%, rgba(246,249,246,.25) 40%, transparent 70%), linear-gradient(135deg,#fff 0%,#fbfcfb 58%,#f7faf7 100%);
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     }
-    main {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: max(36px, env(safe-area-inset-top)) 22px max(36px, env(safe-area-inset-bottom));
-      overflow: hidden;
-      isolation: isolate;
-      position: relative;
-    }
-    main::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      width: min(76vw, 760px);
-      aspect-ratio: 1;
-      left: 50%;
-      top: 45%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(226, 240, 230, .42), rgba(248, 251, 248, .12) 53%, transparent 72%);
-      pointer-events: none;
-    }
-    .identity {
-      width: min(100%, 780px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      animation: arrive .9s cubic-bezier(.2,.7,.2,1) both;
-    }
-    .emblem {
-      display: block;
-      width: clamp(116px, 18vw, 196px);
-      height: auto;
-      object-fit: contain;
-      margin: 0 0 clamp(26px, 4.2vh, 42px);
-      filter: drop-shadow(0 9px 13px rgba(0, 48, 26, .12));
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.65rem, 7.1vw, 5.6rem);
-      font-weight: 650;
-      letter-spacing: -.075em;
-      line-height: 1.02;
-      color: #111a17;
-    }
-    .tagline {
-      margin: clamp(18px, 2.7vh, 28px) 0 0;
-      color: var(--green);
-      font-size: clamp(1.08rem, 2.1vw, 1.5rem);
-      font-weight: 520;
-      letter-spacing: -.025em;
-      line-height: 1.35;
-    }
-    .rule {
-      width: 34px;
-      height: 2px;
-      margin-top: clamp(34px, 5.5vh, 54px);
-      border-radius: 2px;
-      background: #0b6a42;
-      opacity: .72;
-    }
-    .descriptor {
-      max-width: 350px;
-      margin: 22px 0 0;
-      color: var(--muted);
-      font-size: clamp(.9rem, 1.4vw, 1.02rem);
-      font-weight: 400;
-      line-height: 1.7;
-      letter-spacing: -.012em;
-    }
-    .contact {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 8px 12px;
-      color: var(--green);
-      font-size: .92rem;
-      font-weight: 500;
-      letter-spacing: -.01em;
-      text-decoration: none;
-      text-underline-offset: 4px;
-      border-radius: 8px;
-      transition: background-color .2s ease, text-decoration-color .2s ease;
-    }
-    .contact:hover, .contact:focus-visible {
-      background: rgba(7, 91, 58, .06);
-      text-decoration: underline;
-    }
-    .contact:focus-visible {
-      outline: 2px solid var(--green);
-      outline-offset: 3px;
-    }
-    footer {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      bottom: max(18px, env(safe-area-inset-bottom));
-      text-align: center;
-      color: #9aa29d;
-      font-size: .68rem;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-    @keyframes arrive {
-      from { opacity: 0; transform: translateY(9px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 480px) {
-      main { padding-inline: 20px; }
-      .emblem { width: clamp(112px, 34vw, 150px); margin-bottom: 27px; }
-      h1 { font-size: clamp(2.45rem, 10.2vw, 3.3rem); letter-spacing: -.078em; }
-      .tagline { margin-top: 17px; font-size: 1.08rem; }
-      .rule { margin-top: 38px; }
-      .descriptor { max-width: 290px; font-size: .9rem; }
-      footer { font-size: .59rem; letter-spacing: .1em; }
-    }
-    @media (max-width: 340px) {
-      h1 { font-size: 2.2rem; }
-      .tagline { font-size: 1rem; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
-    }
+    .wrap { width: min(100%, 880px); margin: 0 auto; padding: max(28px, env(safe-area-inset-top)) 22px max(28px, env(safe-area-inset-bottom)); }
+    .top { display:flex; align-items:center; gap:12px; }
+    .top img { width:40px; height:40px; object-fit:contain; }
+    .top span { font-size:1.05rem; font-weight:650; letter-spacing:-.03em; }
+    .hero { padding: clamp(56px, 12vh, 120px) 0 clamp(40px, 8vh, 72px); animation: arrive .9s cubic-bezier(.2,.7,.2,1) both; }
+    h1 { margin:0; font-size:clamp(2.5rem,7vw,4.8rem); font-weight:650; letter-spacing:-.07em; line-height:1.03; }
+    .tagline { margin:20px 0 0; max-width:520px; color:var(--muted); font-size:clamp(1.02rem,2vw,1.28rem); line-height:1.55; letter-spacing:-.015em; }
+    h2 { margin:0 0 18px; color:var(--green); font-size:.8rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    .grid { display:grid; gap:16px; grid-template-columns:1fr; }
+    @media (min-width:700px){ .grid { grid-template-columns:1.25fr 1fr; } }
+    .card { display:flex; flex-direction:column; padding:26px; background:rgba(255,255,255,.82); border:1px solid var(--line); border-radius:20px; box-shadow:0 14px 34px -22px rgba(0,48,26,.28); }
+    .app-head { display:flex; align-items:center; gap:16px; }
+    .app-head img { width:64px; height:64px; border-radius:15px; flex:none; }
+    .card h3 { margin:0; font-size:1.3rem; font-weight:650; letter-spacing:-.035em; }
+    .card .kicker { margin:3px 0 0; color:var(--muted); font-size:.85rem; }
+    .card p.body { margin:18px 0 0; color:#3f4a45; font-size:.98rem; line-height:1.6; }
+    .tags { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 0; padding:0; list-style:none; }
+    .tags li { padding:5px 11px; font-size:.78rem; color:var(--green); background:rgba(7,91,58,.07); border-radius:999px; }
+    .actions { margin-top:auto; padding-top:24px; }
+    .btn { display:inline-block; padding:12px 20px; color:#fff; background:var(--green); font-size:.95rem; font-weight:560; text-decoration:none; border-radius:12px; transition:background-color .2s ease, transform .2s ease; }
+    .btn:hover { background:#064a2f; transform:translateY(-1px); }
+    .btn.ghost { color:var(--green); background:transparent; border:1px solid #b9d3c4; }
+    .btn.ghost:hover { background:rgba(7,91,58,.06); }
+    .btn:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+    .note { margin:12px 0 0; color:var(--muted); font-size:.8rem; }
+    .card.cta { background:transparent; border-style:dashed; justify-content:flex-start; }
+    footer { margin-top:clamp(48px,9vh,88px); padding-top:22px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; color:#9aa29d; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; }
+    footer a { color:var(--green); text-decoration:none; letter-spacing:0; text-transform:none; font-size:.85rem; }
+    footer a:hover { text-decoration:underline; }
+    @keyframes arrive { from { opacity:0; transform:translateY(9px); } to { opacity:1; transform:translateY(0); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition:none !important; } }
   </style>
 </head>
 <body>
-  <main>
-    <section class="identity" aria-labelledby="brand-name">
-      <img class="emblem" src="/favicon.png" alt="Logotipo de BirdieLabs IQ" width="256" height="256" fetchpriority="high">
-      <h1 id="brand-name">BirdieLabs IQ</h1>
-      <p class="tagline">tu club, tu app</p>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="descriptor">La tecnología que conecta todo lo que hace grande a tu club.</p>
-      <a class="contact" href="mailto:birdielabsiq@gmail.com" aria-label="Contactar con BirdieLabs IQ por correo electrónico">birdielabsiq@gmail.com</a>
+  <div class="wrap">
+    <header class="top">
+      <img src="/favicon.png" alt="" width="40" height="40">
+      <span>BirdieLabs IQ</span>
+    </header>
+
+    <section class="hero" aria-labelledby="titulo">
+      <h1 id="titulo">Tu club,<br>tu app.</h1>
+      <p class="tagline">Tecnología sencilla que conecta a jugadores, familias y entrenadores en el móvil de cada día.</p>
     </section>
-    <footer>BirdieLabs IQ <span aria-hidden="true">·</span> Tecnología para clubes</footer>
-  </main>
+
+    <section aria-labelledby="apps">
+      <h2 id="apps">Nuestras apps</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="app-head">
+            <img src="/assets/images/alcazar-connect-icon.png" alt="Icono de Alcázar Connect" width="64" height="64">
+            <div>
+              <h3>Alcázar Connect</h3>
+              <p class="kicker">App del CD Alcázar</p>
+            </div>
+          </div>
+          <p class="body">Convocatorias, resultados y clasificaciones, noticias y mensajes del club, con avisos en el móvil. Se instala como una app más desde el navegador.</p>
+          <ul class="tags" aria-label="Qué incluye">
+            <li>Convocatorias</li><li>Resultados</li><li>Noticias</li><li>Mensajes</li><li>Avisos push</li>
+          </ul>
+          <div class="actions">
+            <a class="btn" href="https://alcazarconnect.birdielabs.app" rel="noopener">Abrir la app</a>
+            <p class="note">Acceso para miembros del club.</p>
+          </div>
+        </article>
+
+        <article class="card cta">
+          <h3>¿Quieres la app de tu club?</h3>
+          <p class="body">Cuéntanos cómo funciona tu club y vemos juntos cómo ponerlo todo en una sola app.</p>
+          <div class="actions">
+            <a class="btn ghost" href="mailto:birdielabsiq@gmail.com?subject=Quiero%20una%20app%20para%20mi%20club">Escríbenos</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <span>BirdieLabs IQ · Tecnología para clubes</span>
+      <a href="mailto:birdielabsiq@gmail.com" aria-label="Contactar con BirdieLabs IQ por correo electrónico">birdielabsiq@gmail.com</a>
+    </footer>
+  </div>
 </body>
 </html>
