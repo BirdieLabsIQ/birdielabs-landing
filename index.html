@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fbfcfb">
+  <meta name="theme-color" content="#071810">
   <meta name="description" content="BirdieLabs IQ. Tu club, tu app. Tecnología sencilla para conectar la vida de tu club.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://birdielabs.app/">
@@ -14,92 +14,104 @@
   <meta property="og:url" content="https://birdielabs.app/">
   <meta property="og:site_name" content="BirdieLabs IQ">
   <title>BirdieLabs IQ — tu club, tu app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      color-scheme: light;
-      --ink: #101a17;
-      --green: #075b3a;
-      --muted: #5f6b65;
-      --paper: #f3f7f4;
+      color-scheme: dark;
+      --ink: #eef6f0;
+      --green: #81d5ac;
+      --tagline: #a9dfc3;
+      --muted: #9db0a5;
+      --label: #d5e3da;
+      --paper: #071810;
+      --display: "Inter Tight", "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { min-height: 100%; background: var(--paper); }
     body {
       min-height: 100svh; margin: 0; color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
       -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
     }
-    /* Liquid-glass backdrop: soft colour fields the glass can refract */
-    .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: linear-gradient(160deg, #f8fbf9 0%, #eaf3ed 55%, #e3efe8 100%); }
-    .bg i { position: absolute; border-radius: 50%; filter: blur(50px); opacity: 1; }
-    .bg i:nth-child(1) { width: 52vmax; height: 52vmax; left: -14vmax; top: -16vmax; background: radial-gradient(circle, #6fd0a0 0%, rgba(111,208,160,0) 68%); }
-    .bg i:nth-child(2) { width: 46vmax; height: 46vmax; right: -12vmax; top: 18vh; background: radial-gradient(circle, #9cc8f0 0%, rgba(156,200,240,0) 68%); }
-    .bg i:nth-child(3) { width: 40vmax; height: 40vmax; left: 20vw; bottom: -20vmax; background: radial-gradient(circle, #c9e79c 0%, rgba(201,231,156,0) 68%); }
+    /* Forest backdrop: the brand colour fields, dimmed to a soft glow */
+    .bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; background: radial-gradient(120% 90% at 50% 0%, #0b2117 0%, #071810 55%, #05120c 100%); }
+    .bg i { position: absolute; border-radius: 50%; filter: blur(60px); }
+    .bg i:nth-child(1) { width: 52vmax; height: 52vmax; left: -14vmax; top: -16vmax; background: radial-gradient(circle, rgba(129,213,172,.30) 0%, rgba(129,213,172,0) 68%); }
+    .bg i:nth-child(2) { width: 46vmax; height: 46vmax; right: -12vmax; top: 18vh; background: radial-gradient(circle, rgba(168,207,240,.16) 0%, rgba(168,207,240,0) 68%); }
+    .bg i:nth-child(3) { width: 40vmax; height: 40vmax; left: 20vw; bottom: -20vmax; background: radial-gradient(circle, rgba(208,234,174,.16) 0%, rgba(208,234,174,0) 68%); }
     main {
       min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center;
       padding: max(36px, env(safe-area-inset-top)) 22px max(20px, env(safe-area-inset-bottom));
       position: relative;
     }
     .identity { width: min(100%, 780px); display: flex; flex-direction: column; align-items: center; text-align: center; animation: arrive .9s cubic-bezier(.2,.7,.2,1) both; }
-    .emblem { display: block; width: clamp(104px, 16vw, 172px); height: auto; object-fit: contain; margin: 0 0 clamp(22px, 3.6vh, 36px); filter: drop-shadow(0 12px 18px rgba(0,48,26,.18)); }
-    h1 {
-      margin: 0; font-size: clamp(2.65rem, 7.1vw, 5.6rem); font-weight: 650; letter-spacing: -.075em; line-height: 1.04;
-      color: #0f2a20;
-      background: linear-gradient(172deg, #0c1f18 0%, #0b5a3a 46%, #3da676 78%, #a6e0c2 100%);
-      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-      filter: drop-shadow(0 1px 0 rgba(255,255,255,.85)) drop-shadow(0 14px 22px rgba(7,91,58,.22));
-      padding: 0 .1em .14em;
-    }
-    .tagline { margin: clamp(14px, 2.2vh, 22px) 0 0; color: var(--green); font-size: clamp(1.08rem, 2.1vw, 1.5rem); font-weight: 520; letter-spacing: -.025em; line-height: 1.35; }
-    .rule { width: 34px; height: 2px; margin-top: clamp(26px, 4.2vh, 40px); border-radius: 2px; background: #0b6a42; opacity: .6; }
-    .descriptor { margin: 18px 0 0; color: var(--muted); font-size: clamp(.7rem, 3.1vw, 1.02rem); line-height: 1.7; letter-spacing: -.012em; white-space: nowrap; }
 
-    /* App icons on glass tiles */
-    .apps { list-style: none; margin: clamp(30px, 5vh, 48px) 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(8px, 3vw, 28px); }
-    .app { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 10px; width: clamp(66px, 19vw, 104px); -webkit-tap-highlight-color: transparent; }
+    /* Emblem, slightly lifted: soft halo behind, contact + cast shadow, floor shadow below */
+    .emblem-wrap { position: relative; display: grid; place-items: center; width: clamp(108px, 16vw, 172px); margin: 0 0 clamp(24px, 3.6vh, 36px); padding-bottom: clamp(14px, 2.2vw, 24px); }
+    .emblem-wrap::before { content: ""; position: absolute; left: 50%; top: 42%; width: 200%; aspect-ratio: 1.1; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(closest-side, rgba(129,213,172,.13), rgba(129,213,172,.04) 60%, transparent); pointer-events: none; }
+    .emblem-wrap::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 88%; height: 16%; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.55), rgba(0,0,0,.22) 55%, transparent); filter: blur(3px); pointer-events: none; }
+    .emblem-wrap picture { position: relative; z-index: 1; display: block; width: 100%; }
+    .emblem { position: relative; z-index: 1; display: block; width: 100%; height: auto; object-fit: contain; transform: translateY(-10%);
+      filter: drop-shadow(0 1px .5px rgba(0,0,0,.75)) drop-shadow(0 8px 8px rgba(0,0,0,.45)) drop-shadow(0 22px 22px rgba(0,0,0,.42)) drop-shadow(0 40px 36px rgba(10,14,12,.30)); }
+
+    h1 {
+      margin: 0; font-family: var(--display); font-size: clamp(2.65rem, 7.4vw, 6.4rem); font-weight: 700; letter-spacing: -.05em; line-height: 1;
+      color: var(--ink); padding: 0 .04em .06em;
+    }
+    h1 .iq { color: var(--green); }
+    .tagline { margin: clamp(16px, 2.4vh, 26px) 0 0; color: var(--tagline); font-family: var(--display); font-size: clamp(1.08rem, 2.1vw, 1.5rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.35; }
+    .rule { width: 40px; height: 2px; margin-top: clamp(26px, 4.2vh, 36px); border-radius: 2px; background: var(--green); opacity: .85; }
+    .descriptor { margin: 22px 0 0; color: var(--muted); font-size: clamp(.7rem, 3.1vw, 1.06rem); line-height: 1.6; letter-spacing: -.01em; white-space: nowrap; }
+
+    /* App icons on dark glass tiles */
+    .apps { list-style: none; margin: clamp(32px, 5.4vh, 52px) 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(8px, 3vw, 28px); }
+    .app { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 12px; width: clamp(66px, 19vw, 104px); -webkit-tap-highlight-color: transparent; }
     .tile {
-      position: relative; width: 100%; aspect-ratio: 1; border-radius: 24%; padding: 7%;
-      background: linear-gradient(145deg, rgba(255,255,255,.62), rgba(255,255,255,.24));
-      -webkit-backdrop-filter: blur(18px) saturate(1.7); backdrop-filter: blur(18px) saturate(1.7);
-      border: 1px solid rgba(255,255,255,.7);
-      box-shadow: inset 0 1.5px 0 rgba(255,255,255,.95), inset 0 -1px 0 rgba(255,255,255,.35), 0 14px 28px -12px rgba(0,56,32,.34), 0 2px 6px rgba(0,56,32,.08);
-      transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+      position: relative; width: 100%; aspect-ratio: 1; border-radius: 27%; padding: 9%;
+      background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.03)), #0e2419;
+      -webkit-backdrop-filter: blur(18px) saturate(1.4); backdrop-filter: blur(18px) saturate(1.4);
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 14px 30px -12px rgba(0,0,0,.6), 0 2px 6px rgba(0,0,0,.25);
+      transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease;
       overflow: hidden;
     }
-    .tile::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(160deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 42%); pointer-events: none; }
+    .tile::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(160deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 42%); pointer-events: none; }
     .tile { display: grid; place-items: center; }
-    .tile img { display: block; grid-area: 1 / 1; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 19%; align-self: center; justify-self: center; }
-    .app:hover .tile, .app:focus-visible .tile { transform: translateY(-4px) scale(1.04); box-shadow: inset 0 1.5px 0 rgba(255,255,255,.95), 0 22px 34px -14px rgba(0,56,32,.4), 0 2px 6px rgba(0,56,32,.1); }
+    .tile img { display: block; grid-area: 1 / 1; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 20%; align-self: center; justify-self: center; }
+    .app:hover .tile, .app:focus-visible .tile { transform: translateY(-4px) scale(1.04); border-color: rgba(129,213,172,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 22px 36px -14px rgba(0,0,0,.7), 0 0 0 4px rgba(129,213,172,.06); }
     .app:active .tile { transform: scale(.97); }
     .app:focus-visible .tile { outline: 2px solid var(--green); outline-offset: 3px; }
-    .label { font-size: .8rem; font-weight: 520; color: #26332e; letter-spacing: -.01em; }
+    .label { font-size: .8rem; font-weight: 500; color: var(--label); letter-spacing: -.005em; }
 
-    .contact { display: inline-block; margin-top: 28px; padding: 8px 12px; color: var(--green); font-size: .92rem; font-weight: 500; letter-spacing: -.01em; text-decoration: none; text-underline-offset: 4px; border-radius: 10px; transition: background-color .2s ease; }
-    .contact:hover, .contact:focus-visible { background: rgba(255,255,255,.55); text-decoration: underline; }
+    .contact { display: inline-flex; align-items: center; gap: 9px; margin-top: 36px; padding: 10px 18px; color: var(--green); font-size: .92rem; font-weight: 500; letter-spacing: -.005em; text-decoration: none; border-radius: 999px; background: rgba(129,213,172,.08); border: 1px solid rgba(129,213,172,.3); transition: background-color .2s ease, border-color .2s ease; }
+    .contact svg { flex: 0 0 auto; }
+    .contact:hover, .contact:focus-visible { background: rgba(129,213,172,.15); border-color: rgba(129,213,172,.5); }
     .contact:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
-    footer { margin-top: clamp(36px, 7vh, 64px); text-align: center; color: #8d9892; font-size: .68rem; letter-spacing: .13em; text-transform: uppercase; }
+    footer { margin-top: clamp(40px, 7.5vh, 72px); text-align: center; color: #70887b; font-size: .68rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
 
-    /* Glass dialog */
+    /* Dark glass dialog */
     dialog {
-      width: min(92vw, 400px); padding: 30px 26px 24px; margin: auto; border: 1px solid rgba(255,255,255,.75); border-radius: 30px; color: var(--ink); text-align: center;
-      background: linear-gradient(150deg, rgba(255,255,255,.78), rgba(255,255,255,.5));
-      -webkit-backdrop-filter: blur(28px) saturate(1.8); backdrop-filter: blur(28px) saturate(1.8);
-      box-shadow: inset 0 1.5px 0 rgba(255,255,255,.95), 0 30px 60px -20px rgba(0,40,24,.45);
+      width: min(92vw, 400px); padding: 30px 26px 24px; margin: auto; border: 1px solid rgba(255,255,255,.10); border-radius: 30px; color: var(--ink); text-align: center;
+      background: linear-gradient(150deg, rgba(22,46,34,.92), rgba(9,26,18,.9));
+      -webkit-backdrop-filter: blur(28px) saturate(1.5); backdrop-filter: blur(28px) saturate(1.5);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.10), 0 30px 70px -20px rgba(0,0,0,.75);
     }
     dialog[open] { animation: pop .32s cubic-bezier(.2,.9,.25,1.1) both; }
-    dialog::backdrop { background: rgba(14,32,24,.28); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: fade .25s ease both; }
-    .dlg-icon { width: 68px; height: 68px; margin: 0 auto 14px; border-radius: 22%; padding: 5px; background: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.9); box-shadow: 0 8px 18px -8px rgba(0,56,32,.35); }
+    dialog::backdrop { background: rgba(2,8,5,.55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: fade .25s ease both; }
+    .dlg-icon { width: 68px; height: 68px; margin: 0 auto 14px; border-radius: 24%; padding: 6px; background: #0e2419; border: 1px solid rgba(255,255,255,.10); box-shadow: 0 10px 20px -8px rgba(0,0,0,.6); }
     .dlg-icon { display: grid; place-items: center; }
     .dlg-icon img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; border-radius: 18%; display: block; }
-    dialog h2 { margin: 0; font-size: 1.3rem; font-weight: 650; letter-spacing: -.035em; }
-    dialog p { margin: 12px 0 0; color: #47524d; font-size: .95rem; line-height: 1.6; }
+    dialog h2 { margin: 0; font-family: var(--display); font-size: 1.35rem; font-weight: 700; letter-spacing: -.03em; }
+    dialog p { margin: 12px 0 0; color: #aebfb5; font-size: .95rem; line-height: 1.6; }
     dialog p strong { color: var(--ink); font-weight: 600; }
     .dlg-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
-    .btn { display: block; padding: 13px 18px; font: inherit; font-size: .96rem; font-weight: 580; text-align: center; text-decoration: none; border-radius: 16px; cursor: pointer; border: 0; transition: transform .2s ease, background-color .2s ease; }
-    .btn.primary { color: #fff; background: linear-gradient(180deg, #0f7a4d, #075b3a); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 10px 20px -10px rgba(7,91,58,.7); }
+    .btn { display: block; padding: 13px 18px; font: inherit; font-size: .96rem; font-weight: 600; text-align: center; text-decoration: none; border-radius: 16px; cursor: pointer; border: 0; transition: transform .2s ease, background-color .2s ease; }
+    .btn.primary { color: #06200f; background: linear-gradient(180deg, #9ee2bf, #81d5ac); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 10px 22px -10px rgba(129,213,172,.55); }
     .btn.primary:hover { transform: translateY(-1px); }
-    .btn.secondary { color: var(--green); background: rgba(255,255,255,.6); border: 1px solid rgba(255,255,255,.9); }
-    .btn.secondary:hover { background: rgba(255,255,255,.85); }
+    .btn.secondary { color: var(--label); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); }
+    .btn.secondary:hover { background: rgba(255,255,255,.10); }
     .btn:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
     @keyframes arrive { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
@@ -107,14 +119,14 @@
     @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
     @media (max-width: 480px) {
       main { padding-inline: 20px; }
-      .emblem { width: clamp(100px, 30vw, 136px); }
-      h1 { font-size: clamp(2.45rem, 10.2vw, 3.3rem); letter-spacing: -.078em; }
+      .emblem-wrap { width: clamp(100px, 30vw, 136px); }
+      h1 { font-size: clamp(2.45rem, 11vw, 3.4rem); letter-spacing: -.055em; }
       .tagline { font-size: 1.08rem; }
-      footer { font-size: .59rem; letter-spacing: .1em; }
+      footer { font-size: .59rem; letter-spacing: .12em; }
     }
     @media (max-width: 359px) { .descriptor { white-space: normal; font-size: .82rem; max-width: 260px; } h1 { font-size: 2.2rem; } .tagline { font-size: 1rem; } }
-    @media (max-height: 560px) and (orientation: landscape) { .emblem { width: 72px; margin-bottom: 12px; } .rule { margin-top: 16px; } .apps { margin-top: 18px; } .contact { margin-top: 12px; } }
-    @media (prefers-reduced-transparency: reduce) { .tile, dialog { -webkit-backdrop-filter: none; backdrop-filter: none; background: #fff; } }
+    @media (max-height: 560px) and (orientation: landscape) { .emblem-wrap { width: 72px; margin-bottom: 12px; } .rule { margin-top: 16px; } .apps { margin-top: 18px; } .contact { margin-top: 12px; } }
+    @media (prefers-reduced-transparency: reduce) { .tile, dialog { -webkit-backdrop-filter: none; backdrop-filter: none; background: #0e2419; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition: none !important; } }
   </style>
 </head>
@@ -122,8 +134,13 @@
   <div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
   <main>
     <section class="identity" aria-labelledby="brand-name">
-      <img class="emblem" src="/favicon.png" alt="Logotipo de BirdieLabs IQ" width="256" height="256" fetchpriority="high">
-      <h1 id="brand-name">BirdieLabs IQ</h1>
+      <div class="emblem-wrap">
+        <picture>
+          <source srcset="/assets/images/logo-3d.webp" type="image/webp">
+          <img class="emblem" src="/assets/images/logo-3d.png" alt="Logotipo de BirdieLabs IQ" width="512" height="510" fetchpriority="high">
+        </picture>
+      </div>
+      <h1 id="brand-name">BirdieLabs <span class="iq">IQ</span></h1>
       <p class="tagline">tu club, tu organización, tu app</p>
       <span class="rule" aria-hidden="true"></span>
       <p class="descriptor">La tecnología que conecta todo lo que hace grande a tu club.</p>
@@ -135,7 +152,7 @@
         <li><button class="app" type="button" data-app="BirdieLabs" data-icon="/assets/images/apps/birdielabs.png"><span class="tile"><img src="/assets/images/apps/birdielabs.png" alt="" width="96" height="96"></span><span class="label">BirdieLabs</span></button></li>
       </ul>
 
-      <a class="contact" href="mailto:birdielabsiq@gmail.com" aria-label="Contactar con BirdieLabs IQ por correo electrónico">birdielabsiq@gmail.com</a>
+      <a class="contact" href="mailto:birdielabsiq@gmail.com" aria-label="Contactar con BirdieLabs IQ por correo electrónico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3 7 9 6 9-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>birdielabsiq@gmail.com</a>
     </section>
     <footer>BirdieLabs IQ <span aria-hidden="true">·</span> Tecnología para clubes</footer>
   </main>
